@@ -15,7 +15,7 @@ class AuthGate extends StatelessWidget {
        if (!snapshot.hasData) {
          return SignInScreen(
            providers: [
-             EmailAuthProvider()
+             EmailAuthProvider(),
            ],
            headerBuilder: (context, constraints, shrinkOffset) {
              return Padding(
@@ -43,10 +43,19 @@ class AuthGate extends StatelessWidget {
                ),
              );
            },
+           sideBuilder: (context, shrinkOffset) {
+             return Padding(
+               padding: const EdgeInsets.all(20),
+               child: AspectRatio(
+                 aspectRatio: 1,
+                 child: Image.asset('flutterfire_300x.png'),
+               ),
+             );
+           },
          );
        }
-
        return const HomeScreen();
      },
    );
- }}
+ }
+}
