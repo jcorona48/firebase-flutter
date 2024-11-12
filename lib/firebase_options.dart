@@ -60,7 +60,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '60192982237',
     projectId: 'flutter-auth-f8246',
     storageBucket: 'flutter-auth-f8246.firebasestorage.app',
-    iosBundleId: 'com.example.start',
+    iosBundleId: 'jc.auth.flutter',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -69,7 +69,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '60192982237',
     projectId: 'flutter-auth-f8246',
     storageBucket: 'flutter-auth-f8246.firebasestorage.app',
-    iosBundleId: 'com.example.start',
+    iosBundleId: 'jc.auth.flutter',
   );
 
 }
