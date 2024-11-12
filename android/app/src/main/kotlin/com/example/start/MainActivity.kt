@@ -1,4 +1,4 @@
-package com.example.start
+package jc.auth.flutter
 
 import io.flutter.embedding.android.FlutterActivity
 
