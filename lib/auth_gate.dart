@@ -15,15 +15,23 @@ class AuthGate extends StatelessWidget {
        if (!snapshot.hasData) {
          return SignInScreen(
            providers: [
-             EmailAuthProvider(),
+              EmailAuthProvider()
            ],
            headerBuilder: (context, constraints, shrinkOffset) {
              return Padding(
                padding: const EdgeInsets.all(20),
                child: AspectRatio(
                  aspectRatio: 1,
-                 child: Image.asset('assets/flutterfire_300x.png'),
+                 child: Image.asset('flutterfire_300x.png'),
                ),
+             );
+           },
+           subtitleBuilder: (context, action) {
+             return Padding(
+               padding: const EdgeInsets.symmetric(vertical: 8.0),
+               child: action == AuthAction.signIn
+                   ? const Text('Welcome to FlutterFire, please sign in!')
+                   : const Text('Welcome to Flutterfire, please sign up!'),
              );
            },
          );
